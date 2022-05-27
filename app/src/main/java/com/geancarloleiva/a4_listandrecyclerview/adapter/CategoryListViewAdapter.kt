@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.geancarloleiva.a4_listandrecyclerview.R
 import com.geancarloleiva.a4_listandrecyclerview.model.Category
 
-class CategoryAdapter(context: Context, lstCategory: List<Category>) : BaseAdapter() {
+class CategoryListViewAdapter(context: Context, lstCategory: List<Category>) : BaseAdapter() {
 
     val context = context
     val lstCategory = lstCategory
@@ -33,6 +33,7 @@ class CategoryAdapter(context: Context, lstCategory: List<Category>) : BaseAdapt
 
         //Working with the ViewHolder, that optimize and recycle the components that where created while we navigate in the screen
         val holder: ViewHolder
+        //Validating if the view exists to create or to fill with the holder
         if(convertView == null){
             categoryView = LayoutInflater.from(context).inflate(R.layout.category_list_item, null)
             holder = ViewHolder()

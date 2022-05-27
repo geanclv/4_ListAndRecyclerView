@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Navi Shop</string>
     <string name="app_welcome">Welcome to Navi Shop</string>
+
+    <string name="app_btnListView">Go to ListView example</string>
+    <string name="app_btnRecyclerView">Go to RecyclerView example</string>
 </resources>
