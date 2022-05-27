@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import com.geancarloleiva.a4_listandrecyclerview.R
 import com.geancarloleiva.a4_listandrecyclerview.adapter.CategoryAdapter
 import com.geancarloleiva.a4_listandrecyclerview.model.Category
@@ -32,5 +33,11 @@ class MainActivity : AppCompatActivity() {
         //Replacing the simple ArrayAdapter with my CategoryAdapter
         categoryAdapter = CategoryAdapter(this, DataService.lstCategory)
         lsvCategory.adapter = categoryAdapter
+
+        //Actions when an item of the ListView is clicked
+        lsvCategory.setOnItemClickListener { adapterView, view, i, l ->
+            val category = DataService.lstCategory[i]
+            Toast.makeText(this, "Category: ${category.title}", Toast.LENGTH_SHORT).show()
+        }
     }
 }
