@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">4_ListAndRecyclerView</string>
+    <string name="app_name">Navi Shop</string>
+    <string name="app_welcome">Welcome to Navi Shop</string>
 </resources>
