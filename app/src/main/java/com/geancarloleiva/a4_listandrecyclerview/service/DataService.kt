@@ -12,17 +12,7 @@ object DataService {
         Category("JOGGER 2", "cat_jogger"),
         Category("SHIRTS 2", "cat_tshirt"),
         Category("JOGGER 3", "cat_jogger"),
-        Category("SHIRTS 3", "cat_tshirt"),
-        Category("JOGGER 4", "cat_jogger"),
-        Category("SHIRTS 4", "cat_tshirt"),
-        Category("JOGGER 5", "cat_jogger"),
-        Category("SHIRTS 5", "cat_tshirt"),
-        Category("JOGGER 6", "cat_jogger"),
-        Category("SHIRTS 6", "cat_tshirt"),
-        Category("JOGGER 7", "cat_jogger"),
-        Category("SHIRTS 7", "cat_tshirt"),
-        Category("JOGGER 8", "cat_jogger"),
-        Category("SHIRTS 8", "cat_tshirt")
+        Category("SHIRTS 3", "cat_tshirt")
     )
 
     val lstJogger = listOf<Product>(
@@ -42,4 +32,18 @@ object DataService {
         Product("Tshirt 6", "S/ 10.00", "tshirt_2"),
         Product("Tshirt 7", "S/ 110.00", "tshirt_1")
     )
+
+    val lstProduct = listOf<Product>()
+
+    fun getProductByCategoryTitle(categoryTitle: String): List<Product> {
+        return when (categoryTitle){
+            "JOGGER" -> lstJogger
+            "SHIRTS" -> lstTshirt
+            "JOGGER 2" -> lstJogger
+            "SHIRTS 2" -> lstTshirt
+            "JOGGER 3" -> lstJogger
+            "SHIRTS 3" -> lstTshirt
+            else -> lstProduct
+        }
+    }
 }
